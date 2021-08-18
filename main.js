@@ -28,5 +28,9 @@ var app = new Vue({
                 this.favourites = fav;
             }
         }
+    },
+
+    components: {
+        MyDemoLocalComponent
     }
 });

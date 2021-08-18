@@ -30,3 +30,13 @@ and the DOM is going to be re-rendered to reflect that.
                 <p v-else-if="food.percent_carbs >= 40 && food.percent_carbs < 80">A significant portion comes from carbohydrates</p>
                 <p v-else>This food is not a significant source of carbohydrates</p>
 ```
+
+4. Event handling using v-on directive and alternative syntax using @
+the event name followed the colon :
+```
+<span v-on:click="updateFavourite(food.name, false)"
+```
+and alternative syntax working with event
+```
+<span @click="updateFavourite(food.name, false)"
+```
