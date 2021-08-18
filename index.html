@@ -3,6 +3,9 @@
     <head>
         <title>Learning Vue</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
     </head>
     <body>
         <div id="the_food_app">
@@ -11,6 +14,11 @@
             <div class="food-item" v-for="food in foods" :key="food.name">
                 <p>{{food.name}} - {{food.description}}</p>
                 <img v-bind:src="food.src" width="100" height="100">
+
+                <p v-if="food.percent_carbs >= 80">This food is mostly made up of carbohydrates</p>
+                <p v-else-if="food.percent_carbs >= 40 && food.percent_carbs < 80">A significant portion comes from carbohydrates</p>
+                <p v-else>This food is not a significant source of carbohydrates</p>
+              
             </div>
             
             
